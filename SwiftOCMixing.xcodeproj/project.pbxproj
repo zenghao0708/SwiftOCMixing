@@ -14,6 +14,10 @@
 		5DAC3CEF1E20F3F2002179F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAC3CED1E20F3F2002179F6 /* LaunchScreen.storyboard */; };
 		5DAC3CFA1E20F3F2002179F6 /* SwiftOCMixingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC3CF91E20F3F2002179F6 /* SwiftOCMixingTests.swift */; };
 		5DAC3D051E20F3F2002179F6 /* SwiftOCMixingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC3D041E20F3F2002179F6 /* SwiftOCMixingUITests.swift */; };
+		5DAC3D1D1E20F70A002179F6 /* NSObject+Testable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC3D1C1E20F70A002179F6 /* NSObject+Testable.m */; };
+		5DAC3D211E20F83E002179F6 /* NSStringDemos.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC3D201E20F83E002179F6 /* NSStringDemos.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5DAC3D231E20F93E002179F6 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC3D221E20F93E002179F6 /* Counter.swift */; };
+		5DAC3D261E20FB03002179F6 /* CounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC3D251E20FB03002179F6 /* CounterTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,14 @@
 		5DAC3D001E20F3F2002179F6 /* SwiftOCMixingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftOCMixingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAC3D041E20F3F2002179F6 /* SwiftOCMixingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOCMixingUITests.swift; sourceTree = "<group>"; };
 		5DAC3D061E20F3F2002179F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DAC3D1A1E20F709002179F6 /* SwiftOCMixing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftOCMixing-Bridging-Header.h"; sourceTree = "<group>"; };
+		5DAC3D1B1E20F70A002179F6 /* NSObject+Testable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Testable.h"; path = "ObjC/NSObject+Testable.h"; sourceTree = "<group>"; };
+		5DAC3D1C1E20F70A002179F6 /* NSObject+Testable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Testable.m"; path = "ObjC/NSObject+Testable.m"; sourceTree = "<group>"; };
+		5DAC3D1F1E20F83E002179F6 /* NSStringDemos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSStringDemos.h; path = ObjC/NSStringDemos.h; sourceTree = "<group>"; };
+		5DAC3D201E20F83E002179F6 /* NSStringDemos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringDemos.m; path = ObjC/NSStringDemos.m; sourceTree = "<group>"; };
+		5DAC3D221E20F93E002179F6 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		5DAC3D241E20FB03002179F6 /* CounterTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CounterTests.h; path = ObjC/CounterTests.h; sourceTree = "<group>"; };
+		5DAC3D251E20FB03002179F6 /* CounterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CounterTests.m; path = ObjC/CounterTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +109,15 @@
 		5DAC3CE31E20F3F2002179F6 /* SwiftOCMixing */ = {
 			isa = PBXGroup;
 			children = (
+				5DAC3D1E1E20F82B002179F6 /* ObjC */,
 				5DAC3CE41E20F3F2002179F6 /* AppDelegate.swift */,
 				5DAC3CE61E20F3F2002179F6 /* ViewController.swift */,
 				5DAC3CE81E20F3F2002179F6 /* Main.storyboard */,
 				5DAC3CEB1E20F3F2002179F6 /* Assets.xcassets */,
 				5DAC3CED1E20F3F2002179F6 /* LaunchScreen.storyboard */,
 				5DAC3CF01E20F3F2002179F6 /* Info.plist */,
+				5DAC3D1A1E20F709002179F6 /* SwiftOCMixing-Bridging-Header.h */,
+				5DAC3D221E20F93E002179F6 /* Counter.swift */,
 			);
 			path = SwiftOCMixing;
 			sourceTree = "<group>";
@@ -123,6 +138,19 @@
 				5DAC3D061E20F3F2002179F6 /* Info.plist */,
 			);
 			path = SwiftOCMixingUITests;
+			sourceTree = "<group>";
+		};
+		5DAC3D1E1E20F82B002179F6 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				5DAC3D1F1E20F83E002179F6 /* NSStringDemos.h */,
+				5DAC3D201E20F83E002179F6 /* NSStringDemos.m */,
+				5DAC3D1B1E20F70A002179F6 /* NSObject+Testable.h */,
+				5DAC3D1C1E20F70A002179F6 /* NSObject+Testable.m */,
+				5DAC3D241E20FB03002179F6 /* CounterTests.h */,
+				5DAC3D251E20FB03002179F6 /* CounterTests.m */,
+			);
+			name = ObjC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +222,7 @@
 					5DAC3CE01E20F3F2002179F6 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EAD55NDA68;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					5DAC3CF41E20F3F2002179F6 = {
@@ -262,8 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DAC3D261E20FB03002179F6 /* CounterTests.m in Sources */,
+				5DAC3D231E20F93E002179F6 /* Counter.swift in Sources */,
 				5DAC3CE71E20F3F2002179F6 /* ViewController.swift in Sources */,
 				5DAC3CE51E20F3F2002179F6 /* AppDelegate.swift in Sources */,
+				5DAC3D211E20F83E002179F6 /* NSStringDemos.m in Sources */,
+				5DAC3D1D1E20F70A002179F6 /* NSObject+Testable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,11 +446,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EAD55NDA68;
 				INFOPLIST_FILE = SwiftOCMixing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zenghao0708.SwiftOCMixing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftOCMixing/SwiftOCMixing-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,11 +462,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = EAD55NDA68;
 				INFOPLIST_FILE = SwiftOCMixing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zenghao0708.SwiftOCMixing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftOCMixing/SwiftOCMixing-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
