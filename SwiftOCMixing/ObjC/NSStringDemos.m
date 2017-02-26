@@ -20,9 +20,10 @@
 
 - (void) copyable {
     // 使用NSString的时候， copy 和 retain的是同一个对象
-    //        NSString * str = @"123";
+//    NSString * str = @"123";
+//    NSString * str =  [NSMutableString stringWithString:@"123"];
     
-    // 没下的代码会导致crash， 因为str实际上指向的是一个NSString对象，而不是MutableString,不能使用appendString
+    // 下面的代码会导致crash， 因为str实际上指向的是一个NSString对象，而不是MutableString,不能使用appendString
     //        NSMutableString * str = @"123";
     
     NSMutableString * str = [NSMutableString stringWithString:@"123"];
@@ -123,8 +124,8 @@
 }
 
 - (void) memoryLeak {
-    for( int i = 0; i < 20000 * 1000 * 1000; i++) {
-        NSString * str = [NSMutableString stringWithFormat:@"String - %d", i];
+    for(long long i = 0; i < 200 * 1000 * 1000; i++) {
+        NSString * str = [NSMutableString stringWithFormat:@"String - %lld", i];
         NSLog(@"str: %@", str);
     }
 }
